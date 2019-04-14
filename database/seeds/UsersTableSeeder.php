@@ -18,7 +18,7 @@ class UsersTableSeeder extends Seeder
 
         User::truncate();
 
-        foreach(range(1, 10) as $i) {
+        foreach(range(1, 5) as $i) {
             User::create([
                 'name' => $faker->name,
                 'email' => $faker->unique()->email,

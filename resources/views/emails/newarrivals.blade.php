@@ -1,12 +1,32 @@
-@component('mail::message')
-# Introduction
+@component('mail::layout')
+    {{-- Header --}}
+    @slot('header')
+        @component('mail::header', ['url' => config('app.url')])
+            Wonderful Company
+        @endcomponent
+    @endslot
+Dear {{$user->name}}
 
-The body of your message.
 
-@component('mail::button', ['url' => ''])
-Button Text
+<h2>{{ $new_arrival->title }}</h2>
+
+<p>{{ $new_arrival->body }}</p>
+
+click on the link below to see more
+
+
+@component('mail::button', ['url' => url('/')])
+View Arrival
 @endcomponent
 
-Thanks,<br>
-{{ config('app.name') }}
+Regards,<br>
+Wonderful Company Support Team
+
+{{-- Footer --}}
+    @slot('footer')
+        @component('mail::footer')
+            <!-- footer here -->
+        @endcomponent
+    @endslot
 @endcomponent
+

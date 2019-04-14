@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/get_users', 'MessageController@getUsers');
+Route::get('/get_messages', 'MessageController@getMessages');
+Route::post('notifications', 'MessageController@sendMail');
+
+
+
