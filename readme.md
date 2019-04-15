@@ -1,3 +1,21 @@
+1. Clone the project
+
+2. Run: composer install
+
+3. Edit your .env file
+
+4. Create a database with the name used in .env
+
+5. Run: php artisan key:generate
+
+6. Run: php artisan config:cache
+
+7. Run: php artisan migrate:fresh --seed
+
+8. Run: npm install
+
+9. Run: php artisan serve
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
